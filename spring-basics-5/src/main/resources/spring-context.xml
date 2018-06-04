@@ -1,0 +1,25 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+   <!-- A simple bean definition -->
+   <bean id = "triangle" class = "com.walmart.tutorials.Triangle">
+      
+      <!-- spring is intelligent enough to convert based on the data type and do the assignment -->
+      <constructor-arg value="Equilateral"/>
+      <constructor-arg value="20"/>
+      
+      
+      <!-- <constructor-arg type="java.lang.String" value="Equilateral"/> --> <!-- since String is an object, need to provide complete package name  -->
+      <!-- <constructor-arg type="int" value="20"/> -->
+      
+     <!--  <constructor-arg index="0" value="Isosceles"/>
+      <constructor-arg index="1" value="50"/> -->
+   </bean>
+
+   <!-- more bean definitions go here -->
+   
+</beans>

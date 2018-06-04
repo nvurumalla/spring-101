@@ -1,0 +1,47 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+	<bean id="testBean" class="com.walmart.tutorials.TestBean" />
+	
+	<bean id="triangle" class="com.walmart.tutorials.Triangle"
+		autowire="byName">
+		<!-- autowiring byType works only if there is only one member variable, 
+			if there is more than one member variable then autowiring will fail because of ambiguity -->
+		
+		<!-- autowire by constructor is same as autowire byName but instead of 
+			setter injection, its going to be constructor injection - again there has 
+			to be only one bean or type -->
+
+		<!-- if autowire attribute is not provided then autowiring feature is turned 
+			off -->
+	</bean>
+	
+	<!-- 
+	<bean id="triangle" class="com.walmart.tutorials.Triangle"
+		autowire="byName" scope="singleton">	</bean> -->
+
+	<bean id="pointA" class="com.walmart.tutorials.Point">
+		<property name="x" value="0" />
+		<property name="y" value="0" />
+	</bean>
+
+	<bean id="pointB" class="com.walmart.tutorials.Point">
+		<property name="x" value="-20" />
+		<property name="y" value="0" />
+	</bean>
+
+	<bean id="pointC" class="com.walmart.tutorials.Point">
+		<property name="x" value="20" />
+		<property name="y" value="0" />
+	</bean>
+	
+	<bean id="circle" class="com.walmart.tutorials.Circle" ></bean>
+	
+	
+
+</beans>
